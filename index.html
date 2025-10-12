@@ -6,20 +6,26 @@
     <title>Portafolio - Pedro Parada</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css" />
-    <script type="module">
-        import { GA_ID } from './config.js';
-        // Google tag (gtag.js)
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-        document.head.appendChild(script);
 
+    <!-- Google Analytics dinámico con ID oculto -->
+<script type="module">
+    import { GA_ID } from './config.js';
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(script);
+
+    script.onload = () => {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', GA_ID);
-    </script>
+    };
+</script>
+
 </head>
+
 
 <body>
     <nav class="navbar">
