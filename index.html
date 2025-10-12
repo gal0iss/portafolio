@@ -6,7 +6,21 @@
     <title>Portafolio - Pedro Parada</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css" />
+    <script type="module">
+        import { GA_ID } from './config.js';
+        // Google tag (gtag.js)
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+    </script>
 </head>
+
 <body>
     <nav class="navbar">
     <div class="container nav-container">
@@ -19,47 +33,47 @@
     </div>
     </nav>
 
-    <section id="sobre-mi" class="hero">
-    <div class="container hero-container">
-        <div class="hero-text">
-        <h1>Pedro Parada Troncoso</h1>
-        <h2>Full-Stack Developer</h2>
-        <p>Desarrollador Full-Stack junior enfocado en la tecnología y el aprendizaje constante. Me interesa el análisis y la ingeniería de datos, así como el desarrollo de soluciones tecnológicas en diversas áreas. Combino lo técnico con lo creativo para encontrar soluciones innovadoras y eficaces, buscando proyectos que me desafíen y me permitan generar un impacto positivo.</p>
-        </div>
-        <div class="hero-img">
-        <img src="FotoPerfil.jpg" alt="Pedro Parada">
-        </div>
+<section id="sobre-mi" class="hero">
+<div class="container hero-container">
+    <div class="hero-text">
+    <h1>Pedro Parada Troncoso</h1>
+    <h2>Full-Stack Developer</h2>
+    <p>Desarrollador Full-Stack junior enfocado en la tecnología y el aprendizaje constante. Me interesa el análisis y la ingeniería de datos, así como el desarrollo de soluciones tecnológicas en diversas áreas. Combino lo técnico con lo creativo para encontrar soluciones innovadoras y eficaces, buscando proyectos que me desafíen y me permitan generar un impacto positivo.</p>
     </div>
-    </section>
+    <div class="hero-img">
+    <img src="FotoPerfil.jpg" alt="Pedro Parada">
+    </div>
+</div>
+</section>
 
-    <section id="proyectos">
-    <div class="container">
-        <h2>Proyectos</h2>
-        <div class="projects">
-        <div class="project-card">
-            <img src="https://m.media-amazon.com/images/I/51rttY7a+9L._h1_.png" alt="Proyecto 1">
-            <h3>Proyecto Web Spotify</h3>
-            <p>Visualización de estadísticas de Spotify usando JSON y gráficos interactivos.</p>
-            <a href="https://gal0iss.github.io/portafolio-spotify." target="_blank">Ver proyecto</a>
-            <a href="https://github.com/gal0iss/portafolio-spotify." target="_blank">GitHub</a>
-        </div>
-        <div class="project-card">
-            <img src="https://i.ibb.co/4bY2PYn/logo.webp" alt="Proyecto 2">
-            <h3>Proyecto Halus</h3>
-            <p>Proyecto de certificado Full-stack Java. Pagina web de compra, venta y arriendo de sistemas de energía solar. En conjunto con seis compañeros.</p>
-            <a href="https://darunacv.github.io/halus-preview" target="_blank">Ver proyecto</a>
-            <a href="https://github.com/gal0iss/ProyectoFinalPTF" target="_blank">GitHub</a>
-        </div>
-        <div class="project-card">
-            <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f9ff.png" alt="Proyecto 3">
-            <h3>Proyecto Contra/Relieve</h3>
-            <p>Proyecto que aún está en vias de planificación y programación</p>
-            <a href="#">Ver proyecto</a>
-            <a href="#">GitHub</a>
-        </div>
-        </div>
+<section id="proyectos">
+<div class="container">
+    <h2>Proyectos</h2>
+    <div class="projects">
+    <div class="project-card">
+        <img src="https://m.media-amazon.com/images/I/51rttY7a+9L._h1_.png" alt="Proyecto 1">
+        <h3>Proyecto Web Spotify</h3>
+        <p>Visualización de estadísticas de Spotify usando JSON y gráficos interactivos.</p>
+        <a href="https://gal0iss.github.io/portafolio-spotify." target="_blank">Ver proyecto</a>
+        <a href="https://github.com/gal0iss/portafolio-spotify." target="_blank">GitHub</a>
     </div>
-    </section>
+    <div class="project-card">
+        <img src="https://i.ibb.co/4bY2PYn/logo.webp" alt="Proyecto 2">
+        <h3>Proyecto Halus</h3>
+        <p>Proyecto de certificado Full-stack Java. Pagina web de compra, venta y arriendo de sistemas de energía solar. En conjunto con seis compañeros.</p>
+        <a href="https://darunacv.github.io/halus-preview" target="_blank">Ver proyecto</a>
+        <a href="https://github.com/gal0iss/ProyectoFinalPTF" target="_blank">GitHub</a>
+    </div>
+    <div class="project-card">
+        <img src="https://images.emojiterra.com/twitter/v13.1/512px/1f9ff.png" alt="Proyecto 3">
+        <h3>Proyecto Contra/Relieve</h3>
+        <p>Proyecto que aún está en vias de planificación y programación</p>
+        <a href="#">Ver proyecto</a>
+        <a href="#">GitHub</a>
+    </div>
+    </div>
+</div>
+</section>
 
 <section id="habilidades">
 <div class="container">
@@ -96,7 +110,7 @@
         <p>Lenguaje para manejo y consulta de bases de datos.</p>
     </div>
     <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/C_Language_Logo.svg" alt="C">
         <h3>C</h3>
         <p>Lenguaje de programación de bajo nivel, base de muchos sistemas.</p>
     </div>
@@ -118,64 +132,96 @@
 </div>
 </section>
 
-    <section id="certificados">
-    <div class="container">
-        <h2>Certificados</h2>
-        <div class="certificados-cards">
-                <div class="certificado-card">
-                <h3>Desarrollador Full Stack JAVA</h3>
-                <p>Coding Dojo - abr. 2025</p>
-                <a href="https://view.pok.tech/c/84764c14-19bf-498d-abd0-031dc2789847" target="_blank">Ver Credencial</a>
-            </div>
+<section id="certificados">
+<div class="container">
+    <h2>Certificados</h2>
+    <div class="certificados-cards">
             <div class="certificado-card">
-                <h3>Git y github</h3>
-                <p>Udemy - sep. 2025</p>
-                <a href="https://www.udemy.com/certificate/UC-0f7ea98b-2b1d-4443-98cb-82fee125229d" target="_blank">Ver Credencial</a>
-            </div>
-            <div class="certificado-card">
-                <h3>Fundamentos de IA</h3>
-                <p>Coursera - Agost. 2025</p>
-                <a href="https://www.credly.com/badges/92f767b6-1945-4925-9647-a4223860698b/linked_in_profile" target="_blank">Ver Credencial</a>
-            </div>
-            <div class="certificado-card">
-                <h3>Orientación al logro</h3>
-                <p>Forge Foundation - mar. 2025</p>
-                <a href="https://view.pok.tech/c/beee89fd-2980-4d59-80e2-284277b0a213" target="_blank">Ver Credencial</a>
-            </div>
-            <div class="certificado-card">
-                <h3>Trabajo en equipo</h3>
-                <p>Forge Foundation - ene. 2025</p>
-                <a href="https://view.pok.tech/c/b5f35e88-c1fb-4c94-ad68-0af75eb40270" target="_blank">Ver Credencial</a>
-            </div>
-            <div class="certificado-card">
-                <h3>Compromiso con el Aprendizaje</h3>
-                <p>Forge Foundation - abr. 2025</p>
-                <a href="https://view.pok.tech/c/3e9da282-be0b-4c75-b7ff-09ded2dd5dca" target="_blank">Ver Credencial</a>
+            <h3>Desarrollador Full Stack JAVA</h3>
+            <p>Coding Dojo - abr. 2025</p>
+            <a href="https://view.pok.tech/c/84764c14-19bf-498d-abd0-031dc2789847" target="_blank">Ver Credencial</a>
         </div>
+        <div class="certificado-card">
+            <h3>Git y github</h3>
+            <p>Udemy - sep. 2025</p>
+            <a href="https://www.udemy.com/certificate/UC-0f7ea98b-2b1d-4443-98cb-82fee125229d" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Fundamentos de IA</h3>
+            <p>Coursera - Agost. 2025</p>
+            <a href="https://www.credly.com/badges/92f767b6-1945-4925-9647-a4223860698b/linked_in_profile" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Orientación al logro</h3>
+            <p>Forge Foundation - mar. 2025</p>
+            <a href="https://view.pok.tech/c/beee89fd-2980-4d59-80e2-284277b0a213" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Trabajo en equipo</h3>
+            <p>Forge Foundation - ene. 2025</p>
+            <a href="https://view.pok.tech/c/b5f35e88-c1fb-4c94-ad68-0af75eb40270" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Web Scrapping</h3>
+            <p>Udemy - sept. 2025</p>
+            <a href="https://www.udemy.com/certificate/UC-5eb6d0da-4c1e-4601-860a-64404891f3d8" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Fundamentos de Soporte Técnico </h3>
+            <p>Coursera - sept. 2025</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/SZ2SOWK8NCOM" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Fundamentos de Análisis de Datos </h3>
+            <p>Coursera - sept. 2025</p>
+            <a href="https://coursera.org/share/03361b5aa7d12b73a3d0a9021020aae7" target="_blank">Ver Credencial</a>
+        </div>
+        <div class="certificado-card">
+            <h3>Compromiso con el Aprendizaje</h3>
+            <p>Forge Foundation - abr. 2025</p>
+            <a href="https://view.pok.tech/c/3e9da282-be0b-4c75-b7ff-09ded2dd5dca" target="_blank">Ver Credencial</a>
+            
     </div>
-    </section>
+</div>
+</section>
 
-    <section id="descarga-cv" class="cv-section">
-    <div class="container cv-container">
-        <h2>¿Quieres conocer más sobre mí?</h2>
-        <p>Descarga mi CV y revisa mi experiencia y educación.</p>
-        <a href="PedroParadaCV.pdf" download="PedroParadaCV.pdf" class="btn-cv">Descargar PDF</a>
-        <a id="btn-preview" class="btn-cv" style="margin-left: 10px;">Ver vista previa</a>
-            <div id="cv-preview" style="margin-top: 20px; display: none;">
-    <iframe src="PedroParadaCV.pdf" width="100%" height="800px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
-    </div>
-    </div>
-    </section>
+<section id="descarga-cv" class="cv-section">
+<div class="container cv-container">
+    <h2>¿Quieres conocer más sobre mí?</h2>
+    <p>Descarga mi CV y revisa mi experiencia y educación.</p>
+    <a href="PedroParadaCV.pdf" download="PedroParadaCV.pdf" class="btn-cv">Descargar PDF</a>
+    <a id="btn-preview" class="btn-cv" style="margin-left: 10px;">Ver vista previa</a>
+        <div id="cv-preview" style="margin-top: 20px; display: none;">
+<iframe src="PedroParadaCV.pdf" width="100%" height="800px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+</div>
+</div>
+</section>
 
-    <section id="contacto">
+<section id="contacto" class="section">
     <div class="container">
         <h2>Contacto</h2>
-        <div class="contact-cards">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzzjjlgr" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" id="submit-btn">Enviar mensaje</button>
+            <p id="form-status" class="form-status"></p>
+        </form>
+        <div class="content contact-cards">
             <div class="contact-card" onclick="copyEmail()">
-            <span class="icon">📧</span>
-            <span id="email">pedro.paradask@gmail.com</span>
-            <span id="copy-msg" style="margin-left:10px; color:green; display:none;">Copiado :)</span>
-        </div>
+                <span class="icon">📧</span>
+                <span id="email-contacto">pedro.paradask@gmail.com</span>
+                <span id="copy-msg" style="margin-left:10px; color:green; display:none;">Copiado :)</span>
+            </div>
             <div class="contact-card">
                 <span class="icon">🔗</span>
                 <a href="https://linkedin.com/in/pedro-parada" target="_blank">LinkedIn</a>
@@ -191,14 +237,14 @@
             </div>
         </div>
     </div>
-    </section>
-
-    <footer>
+</section>
+<button id="back-to-top" title="Volver arriba">↑</button>
+<footer>
     <div class="container">
         &copy; 2025 Pedro Parada.
     </div>
-    </footer>
-    <script src="script.js"></script>
+</footer>
+<script src="script.js"></script>
 </body>
 
 </html>
