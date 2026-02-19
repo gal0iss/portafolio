@@ -56,6 +56,7 @@ document.getElementById("btn-preview").addEventListener("click", function() {
         });
     }
 });
+
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 const submitBtn = document.getElementById('submit-btn');
